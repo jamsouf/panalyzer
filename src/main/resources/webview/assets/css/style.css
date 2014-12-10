@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'LatoLight';
+    src: url('../fonts/Lato-Light.ttf');
+}
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('../fonts/Lato-Regular.ttf');
+}
+@font-face {
+    font-family: 'LatoBold';
+    src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('../fonts/Lato-Black.ttf');
+}
+body {
+    margin-top:70px;
+    background-image: url('../img/bg.png');
+    font-size: 14px;
+}
+div {
+    position: relative;
+}
+.lato-light {
+    font-family: 'LatoLight';
+}
+.lato-regular {
+    font-family: 'LatoRegular';
+}
+.lato-bold {
+    font-family: 'LatoBold';
+}
+.lato-black {
+    font-family: 'LatoBlack';
+}
+.box {
+    background-color:#FFF;
+}
+.box .inner {
+    padding: 15px;
+}
+.wp33 {
+    width: 32.4%;
+}
+.wp50 {
+    width: 49.3%;
+}
+.label {
+    margin-right: 10px;
+    padding: 2px 7px;
+    background-color: #E9E9E9;
+    color: #7D7D7D;
+    font: normal 12px 'LatoBold';
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+}
+.float {
+    float: left;
+}
+.clear {
+    clear: both;
+}
+#main {
+    width: 70%;
+    margin: auto;
+}
+#logo {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    font-size: 14px;
+    background-color: #3A351F;
+}
+#logo a {
+    display: block;
+    padding: 7px;
+    color: #F0EEE3;
+    text-decoration: none;
+    transition: background-color 250ms linear;
+}
+#logo a:hover {
+    background-color: #232012;
+}
+#navi {
+    z-index: 999;
+    float: left;
+    width: 130px;
+    top: -19px;
+    text-align: right;
+    white-space: pre-line;
+}
+#navi a {
+    display: inline-block;
+    margin: 2px 0;
+    padding: 6px 12px;
+    font-family: 'LatoBold';
+    font-size: 14px;
+    background-color: #0D4D4D;
+    color: #FFF;
+    text-decoration: none;
+    transition: background-color 250ms, padding-right 80ms ease-out;
+}
+#navi a i {
+    margin-left: 6px;
+}
+#navi a:hover {
+    background-color: #092837;
+    padding-right: 15px;
+}
+#content {
+    padding-left:150px;
+}
+#content .headinfo {
+    color: #777;
+    font-size: 12px;
+}
+#content .box {
+    margin: 0 1.4% 1.4% 0;
+    line-height: 24px;
+}
+#content .box .key {
+    padding: 60px 0;
+    text-align: center;
+}
+.key .number {
+    font: normal 2.7vw 'LatoLight';
+}
+.key i {
+    margin-left: 6px;
+    color: #9E9E9E;
+}
+.key .title {
+    display: inline-block;
+    margin-top: 20px;
+    font: normal 1.3vw 'LatoBlack';
+}
+#content .nmright {
+    margin-right: 0;
+}
