@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>panalyzer</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
         <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-        <title>panalyzer</title>
+        <script src="assets/js/data.js" type="text/javascript"></script>
+        <script src="assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+        <script src="assets/js/sammy.js" type="text/javascript"></script>
+        <script src="assets/js/highcharts.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="main" class="lato-regular">
@@ -15,59 +19,79 @@
             </div>
             
             <div id="navi">
-                <a href="#">overview <i class="fa fa-th"></i></a>
-                <a href="#">folders <i class="fa fa-folder"></i></a>
-                <a href="#">files <i class="fa fa-file"></i></a>
+                <a id="clk-overview" href="#/overview">overview <i class="fa fa-th"></i></a>
+                <a id="clk-folders" href="#/folders">folders <i class="fa fa-folder"></i></a>
+                <a id="clk-files" href="#/files">files <i class="fa fa-file"></i></a>
             </div>
             
             <div id="content">
                 
-                <div class="box nmright headinfo">
-                    <div class="inner">
-                        <span class="label">Project</span> <b id="dt.project"></b><br>
-                        <span class="label">Analyzed</span> <b id="dt.analyzed"></b>
+                <div id="overview" class="dnone">
+                
+                    <div class="box nmright headinfo">
+                        <div class="inner">
+                            <span class="label">Project</span> <span id="dt.project"></span><br>
+                            <span class="label">Analyzed</span> <span id="dt.analyzed"></span>
+                        </div>
                     </div>
+                    
+                    <div class="box float wp33">
+                        <div class="inner key">
+                            <span id="dt.folders" class="number"></span><br>
+                            <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="box float wp33">
+                        <div class="inner key">
+                            <span id="dt.files" class="number"></span><br>
+                            <span class="title">files</span> <i class="fa fa-file-text-o"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="box float wp33 nmright">
+                        <div class="inner key">
+                            <span id="dt.loc" class="number"></span><br>
+                            <span class="title">lines of code</span> <i class="fa fa-code"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="clear"></div>
+                    
+                    <div class="box nmright">
+                        <div id="topFileExt" class="inner"></div>
+                    </div>
+                    
+                    <div class="clear"></div>
+                    
                 </div>
                 
-                <div class="box float wp33">
-                    <div class="inner key">
-                        <span id="dt.folders" class="number"></span><br>
-                        <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
+                <div id="folders" class="dnone">
+                    
+                    <div class="box nmright">
+                        <div class="inner">
+                            folders
+                        </div>
                     </div>
+                    
                 </div>
                 
-                <div class="box float wp33">
-                    <div class="inner key">
-                        <span id="dt.files" class="number"></span><br>
-                        <span class="title">files</span> <i class="fa fa-file-text-o"></i>
+                <div id="files" class="dnone">
+                    
+                    <div class="box nmright">
+                        <div class="inner">
+                            files
+                        </div>
                     </div>
+                    
                 </div>
                 
-                <div class="box float wp33 nmright">
-                    <div class="inner key">
-                        <span id="dt.loc" class="number"></span><br>
-                        <span class="title">lines of code</span> <i class="fa fa-code"></i>
-                    </div>
-                </div>
-                
-                <div class="box float wp50">
-                    <div class="inner">
-                        
-                    </div>
-                </div>
-                
-                <div class="box float wp50 nmright">
-                    <div class="inner">
-                        
-                    </div>
-                </div>
-            
             </div>
             
             <div class="clear"></div>
             
         </div>
         
-        <script src="assets/js/data.js" type="text/javascript"></script>
+        <script src="assets/js/run.js" type="text/javascript"></script>
     </body>
 </html>

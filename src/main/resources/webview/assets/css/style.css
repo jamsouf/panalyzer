@@ -1,19 +1,12 @@
-@font-face {
-    font-family: 'LatoLight';
-    src: url('../fonts/Lato-Light.ttf');
-}
-@font-face {
-    font-family: 'LatoRegular';
-    src: url('../fonts/Lato-Regular.ttf');
-}
-@font-face {
-    font-family: 'LatoBold';
-    src: url('../fonts/Lato-Bold.ttf');
-}
-@font-face {
-    font-family: 'LatoBlack';
-    src: url('../fonts/Lato-Black.ttf');
-}
+@font-face { font-family: 'LatoLight'; src: url('../fonts/Lato-Light.ttf'); }
+@font-face { font-family: 'LatoRegular'; src: url('../fonts/Lato-Regular.ttf'); }
+@font-face { font-family: 'LatoBold'; src: url('../fonts/Lato-Bold.ttf'); }
+@font-face { font-family: 'LatoBlack'; src: url('../fonts/Lato-Black.ttf'); }
+.lato-light { font-family: 'LatoLight'; }
+.lato-regular { font-family: 'LatoRegular'; }
+.lato-bold { font-family: 'LatoBold'; }
+.lato-black { font-family: 'LatoBlack'; }
+
 body {
     margin-top:70px;
     background-image: url('../img/bg.png');
@@ -22,30 +15,14 @@ body {
 div {
     position: relative;
 }
-.lato-light {
-    font-family: 'LatoLight';
-}
-.lato-regular {
-    font-family: 'LatoRegular';
-}
-.lato-bold {
-    font-family: 'LatoBold';
-}
-.lato-black {
-    font-family: 'LatoBlack';
-}
 .box {
     background-color:#FFF;
 }
 .box .inner {
     padding: 15px;
 }
-.wp33 {
-    width: 32.4%;
-}
-.wp50 {
-    width: 49.3%;
-}
+.wp33 { width: 32.4%; }
+.wp50 { width: 49.3%; }
 .label {
     margin-right: 10px;
     padding: 2px 7px;
@@ -55,12 +32,9 @@ div {
     border: 1px solid #E0E0E0;
     border-radius: 5px;
 }
-.float {
-    float: left;
-}
-.clear {
-    clear: both;
-}
+.float { float: left; }
+.clear { clear: both; }
+.dnone { display: none; }
 #main {
     width: 70%;
     margin: auto;
@@ -104,7 +78,7 @@ div {
 #navi a i {
     margin-left: 6px;
 }
-#navi a:hover {
+#navi a:hover, #navi .active {
     background-color: #092837;
     padding-right: 15px;
 }
@@ -113,7 +87,7 @@ div {
 }
 #content .headinfo {
     color: #777;
-    font-size: 12px;
+    font-size: 14px;
 }
 #content .box {
     margin: 0 1.4% 1.4% 0;
@@ -137,4 +111,7 @@ div {
 }
 #content .nmright {
     margin-right: 0;
+}
+#topFileExt {
+    height: 35vh;
 }
