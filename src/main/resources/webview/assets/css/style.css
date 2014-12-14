@@ -23,6 +23,9 @@ div {
 }
 .wp33 { width: 32.4%; }
 .wp50 { width: 49.3%; }
+.wp66 { width: 66.2%; }
+.hf200 { height: 200px; }
+.hf430 { height: 430px; }
 .label {
     margin-right: 10px;
     padding: 2px 7px;
@@ -32,9 +35,9 @@ div {
     border: 1px solid #E0E0E0;
     border-radius: 5px;
 }
+.center { text-align: center; }
 .float { float: left; }
 .clear { clear: both; }
-.dnone { display: none; }
 #main {
     width: 70%;
     margin: auto;
@@ -94,11 +97,11 @@ div {
     line-height: 24px;
 }
 #content .box .key {
-    padding: 60px 0;
+    padding: 60px 0 0;
     text-align: center;
 }
 .key .number {
-    font: normal 2.7vw 'LatoLight';
+    font: normal 33px 'LatoLight';
 }
 .key i {
     margin-left: 6px;
@@ -107,11 +110,45 @@ div {
 .key .title {
     display: inline-block;
     margin-top: 20px;
-    font: normal 1.3vw 'LatoBlack';
+    font: normal 16px 'LatoBlack';
 }
 #content .nmright {
     margin-right: 0;
 }
 #topFileExt {
-    height: 35vh;
+    height: 290px;
+}
+#topFolders ul {
+    padding-left: 15px;
+}
+#topFolders li {
+    color: #4C4C4C;
+    font-size: 13px;
+    line-height: 29.5px;
+    list-style-type: none;
+}
+#topFolders li .label {
+    padding: 3px 10px;
+    border: none;
+    color: #FFF;
+}
+#topFolders li .label-1 { background-color: #354F5D; }
+#topFolders li .label-2 { background-color: #34B39E; }
+#topFolders li .label-3 { background-color: #E1584D; }
+#topFolders li .label-4 { background-color: #EEA19B; }
+#topFolders li .label-5 { background-color: #BCBCBC; }
+#content .box .fsize {
+    padding: 32px 0;
+    border-bottom: 1px solid #C5C5C5;
+}
+#content .box .fsize:last-child {
+    border: none;
+}
+.fsize .number {
+    font-size: 30px;
+}
+.fsize .title {
+    margin-top: 5px;
+    font: normal 16px 'LatoRegular';
+    color: #4C4C4C;
 }

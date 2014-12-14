@@ -26,30 +26,31 @@
             
             <div id="content">
                 
-                <div id="overview" class="dnone">
+                <div id="overview">
                 
                     <div class="box nmright headinfo">
                         <div class="inner">
                             <span class="label">Project</span> <span id="dt.project"></span><br>
-                            <span class="label">Analyzed</span> <span id="dt.analyzed"></span>
+                            <span class="label">Analyzed</span> <span id="dt.analyzed"></span><br>
+                            <span class="label">Total size</span> <span id="dt.sizeTotal"></span>
                         </div>
                     </div>
                     
-                    <div class="box float wp33">
+                    <div class="box float wp33 hf200">
                         <div class="inner key">
                             <span id="dt.folders" class="number"></span><br>
                             <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
                         </div>
                     </div>
                     
-                    <div class="box float wp33">
+                    <div class="box float wp33 hf200">
                         <div class="inner key">
                             <span id="dt.files" class="number"></span><br>
                             <span class="title">files</span> <i class="fa fa-file-text-o"></i>
                         </div>
                     </div>
                     
-                    <div class="box float wp33 nmright">
+                    <div class="box float wp33 hf200 nmright">
                         <div class="inner key">
                             <span id="dt.loc" class="number"></span><br>
                             <span class="title">lines of code</span> <i class="fa fa-code"></i>
@@ -66,23 +67,62 @@
                     
                 </div>
                 
-                <div id="folders" class="dnone">
+                <div id="folders">
                     
-                    <div class="box nmright">
-                        <div class="inner">
-                            folders
+                        <div class="box float wp66 hf200">
+                            <div id="topFolders" class="inner">
+                                <ul>
+                                    <li><span class="label label-1">321 files</span> langr.io/src/Langr/Model/</li>
+                                    <li><span class="label label-2">145 files</span> langr.io/src/Langr/db/sql/</li>
+                                    <li><span class="label label-3">31 files</span> langr.io/src/Langr/texts/de/</li>
+                                    <li><span class="label label-4">14 files</span> langr.io/src/Langr/resources/img/</li>
+                                    <li><span class="label label-5">9 files</span> langr.io/src/Langr/View/</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+                        
+                        <div class="box float wp33 hf200 nmright">
+                            <div class="inner key">
+                                <span id="dt.folders2" class="number"></span><br>
+                                <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="box float wp33 hf430">
+                            <div class="inner tacenter">
+                                <div class="key fsize">
+                                    <span id="" class="number">8.4 MB</span><br>
+                                    <span class="title">img/</span> <i class="fa fa-folder-open-o"></i>
+                                </div>
+                                
+                                <div class="key fsize">
+                                    <span id="" class="number">3.2 MB</span><br>
+                                    <span class="title">resources/</span> <i class="fa fa-folder-open-o"></i>
+                                </div>
+                                <div class="key fsize">
+                                    <span id="" class="number">25.9 KB</span><br>
+                                    <span class="title">js/</span> <i class="fa fa-folder-open-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="box float wp66 hf430 nmright">
+                            <div id="topLocFolders" class="inner"></div>
+                        </div>
+                    
+                    <div class="clear"></div>
                     
                 </div>
                 
-                <div id="files" class="dnone">
+                <div id="files">
                     
                     <div class="box nmright">
                         <div class="inner">
                             files
                         </div>
                     </div>
+                    
+                    <div class="clear"></div>
                     
                 </div>
                 
