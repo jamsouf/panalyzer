@@ -8,7 +8,7 @@
 .lato-black { font-family: 'LatoBlack'; }
 
 body {
-    margin-top:70px;
+    margin-top:50px;
     background-image: url('../img/bg.png');
     font-size: 14px;
 }
@@ -24,7 +24,10 @@ div {
 .wp33 { width: 32.4%; }
 .wp50 { width: 49.3%; }
 .wp66 { width: 66.2%; }
+.hf170 { height: 170px; }
 .hf200 { height: 200px; }
+.hf250 { height: 250px; }
+.hf300 { height: 300px; }
 .hf430 { height: 430px; }
 .label {
     margin-right: 10px;
@@ -44,7 +47,7 @@ div {
 }
 #logo {
     position: absolute;
-    top: -70px;
+    top: -50px;
     right: 0;
     font-size: 14px;
     background-color: #3A351F;
@@ -115,28 +118,25 @@ div {
 #content .nmright {
     margin-right: 0;
 }
-#topFileExt {
-    height: 290px;
-}
-#topFolders ul {
+#topFoldersFiles ul {
     padding-left: 15px;
 }
-#topFolders li {
+#topFoldersFiles li {
     color: #4C4C4C;
     font-size: 13px;
     line-height: 29.5px;
     list-style-type: none;
 }
-#topFolders li .label {
+#topFoldersFiles li .label {
     padding: 3px 10px;
     border: none;
     color: #FFF;
 }
-#topFolders li .label-1 { background-color: #354F5D; }
-#topFolders li .label-2 { background-color: #34B39E; }
-#topFolders li .label-3 { background-color: #E1584D; }
-#topFolders li .label-4 { background-color: #EEA19B; }
-#topFolders li .label-5 { background-color: #BCBCBC; }
+#topFoldersFiles li .label-1 { background-color: #354F5D; }
+#topFoldersFiles li .label-2 { background-color: #34B39E; }
+#topFoldersFiles li .label-3 { background-color: #E1584D; }
+#topFoldersFiles li .label-4 { background-color: #EEA19B; }
+#topFoldersFiles li .label-5 { background-color: #BCBCBC; }
 #content .box .fsize {
     padding: 32px 0;
     border-bottom: 1px solid #C5C5C5;
@@ -151,4 +151,33 @@ div {
     margin-top: 5px;
     font: normal 16px 'LatoRegular';
     color: #4C4C4C;
+}
+#topFilesLastMod ul {
+    padding-left: 0px;
+}
+#topFilesLastMod li {
+    color: #4C4C4C;
+    font-size: 13px;
+    line-height: 26px;
+    list-style-type: none;
+}
+#topFilesLastMod .label-title {
+    background-color: #354F5D;
+    color: #FFF;
+}
+#topFilesLastMod .label-date {
+    margin-right: 3px;
+}
+#topFilesLastMod .label-time {
+    margin-right: 3px;
+}
+#topFilesLastMod .label-owner {
+    margin-right: 10px;
+}
+.path-start {
+    color: #848484;
+}
+.path-end {
+    font-family: 'LatoBold';
+    color: #484848;
 }

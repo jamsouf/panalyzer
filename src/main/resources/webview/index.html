@@ -30,29 +30,29 @@
                 
                     <div class="box nmright headinfo">
                         <div class="inner">
-                            <span class="label">Project</span> <span id="dt.project"></span><br>
-                            <span class="label">Analyzed</span> <span id="dt.analyzed"></span><br>
-                            <span class="label">Total size</span> <span id="dt.sizeTotal"></span>
+                            <span class="label">Project</span> <span id="d.project"></span><br>
+                            <span class="label">Analyzed</span> <span id="d.analyzed"></span><br>
+                            <span class="label">Total size</span> <span id="d.totalSize"></span>
                         </div>
                     </div>
                     
                     <div class="box float wp33 hf200">
                         <div class="inner key">
-                            <span id="dt.folders" class="number"></span><br>
+                            <span id="d.totalFolders" class="number"></span><br>
                             <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
                         </div>
                     </div>
                     
                     <div class="box float wp33 hf200">
                         <div class="inner key">
-                            <span id="dt.files" class="number"></span><br>
+                            <span id="d.totalFiles" class="number"></span><br>
                             <span class="title">files</span> <i class="fa fa-file-text-o"></i>
                         </div>
                     </div>
                     
                     <div class="box float wp33 hf200 nmright">
                         <div class="inner key">
-                            <span id="dt.loc" class="number"></span><br>
+                            <span id="d.totalLoc" class="number"></span><br>
                             <span class="title">lines of code</span> <i class="fa fa-code"></i>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="clear"></div>
                     
                     <div class="box nmright">
-                        <div id="topFileExt" class="inner"></div>
+                        <div id="topFilesExt" class="inner hf300"></div>
                     </div>
                     
                     <div class="clear"></div>
@@ -69,46 +69,46 @@
                 
                 <div id="folders">
                     
-                        <div class="box float wp66 hf200">
-                            <div id="topFolders" class="inner">
-                                <ul>
-                                    <li><span class="label label-1">321 files</span> langr.io/src/Langr/Model/</li>
-                                    <li><span class="label label-2">145 files</span> langr.io/src/Langr/db/sql/</li>
-                                    <li><span class="label label-3">31 files</span> langr.io/src/Langr/texts/de/</li>
-                                    <li><span class="label label-4">14 files</span> langr.io/src/Langr/resources/img/</li>
-                                    <li><span class="label label-5">9 files</span> langr.io/src/Langr/View/</li>
-                                </ul>
+                    <div class="box float wp66 hf200">
+                        <div id="topFoldersFiles" class="inner">
+                            <ul>
+                                <li><span id="tff-value-1" class="label label-1"></span> <span id="tff-ident-1"></span></li>
+                                <li><span id="tff-value-2" class="label label-2"></span> <span id="tff-ident-2"></span></li>
+                                <li><span id="tff-value-3" class="label label-3"></span> <span id="tff-ident-3"></span></li>
+                                <li><span id="tff-value-4" class="label label-4"></span> <span id="tff-ident-4"></span></li>
+                                <li><span id="tff-value-5" class="label label-5"></span> <span id="tff-ident-5"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="box float wp33 hf200 nmright">
+                        <div class="inner key">
+                            <span id="d.totalFolders-2" class="number"></span><br>
+                            <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="box float wp33 hf430">
+                        <div class="inner tacenter">
+                            <div class="key fsize">
+                                <span id="tfs-value-1" class="number"></span><br>
+                                <span id="tfs-ident-1" class="title"></span> <i class="fa fa-folder-open-o"></i>
+                            </div>
+                            
+                            <div class="key fsize">
+                                <span id="tfs-value-2" class="number"></span><br>
+                                <span id="tfs-ident-2" class="title"></span> <i class="fa fa-folder-open-o"></i>
+                            </div>
+                            <div class="key fsize">
+                                <span id="tfs-value-3" class="number"></span><br>
+                                <span id="tfs-ident-3" class="title"></span> <i class="fa fa-folder-open-o"></i>
                             </div>
                         </div>
-                        
-                        <div class="box float wp33 hf200 nmright">
-                            <div class="inner key">
-                                <span id="dt.folders2" class="number"></span><br>
-                                <span class="title">folders</span> <i class="fa fa-folder-open-o"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="box float wp33 hf430">
-                            <div class="inner tacenter">
-                                <div class="key fsize">
-                                    <span id="" class="number">8.4 MB</span><br>
-                                    <span class="title">img/</span> <i class="fa fa-folder-open-o"></i>
-                                </div>
-                                
-                                <div class="key fsize">
-                                    <span id="" class="number">3.2 MB</span><br>
-                                    <span class="title">resources/</span> <i class="fa fa-folder-open-o"></i>
-                                </div>
-                                <div class="key fsize">
-                                    <span id="" class="number">25.9 KB</span><br>
-                                    <span class="title">js/</span> <i class="fa fa-folder-open-o"></i>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="box float wp66 hf430 nmright">
-                            <div id="topLocFolders" class="inner"></div>
-                        </div>
+                    </div>
+                    
+                    <div class="box float wp66 hf430 nmright">
+                        <div id="topFoldersLoc" class="inner"></div>
+                    </div>
                     
                     <div class="clear"></div>
                     
@@ -116,13 +116,39 @@
                 
                 <div id="files">
                     
-                    <div class="box nmright">
-                        <div class="inner">
-                            files
+                    <div class="box float wp33">
+                        <div class="inner hf170 key">
+                            <span id="d.totalFiles-2" class="number"></span><br>
+                            <span class="title">files</span> <i class="fa fa-file-text-o"></i>
                         </div>
                     </div>
                     
+                    <div class="box float wp66 nmright">
+                        <div id="topFilesSize" class="inner hf200"></div>
+                    </div>
+                    
+                    <div class="box float wp50">
+                        <div id="topFilesLoc" class="inner hf250"></div>
+                    </div>
+                    
+                    <div class="box float wp50 nmright">
+                        <div id="topExtLoc" class="inner hf250"></div>
+                    </div>
+                    
                     <div class="clear"></div>
+                    
+                    <div class="box nmright">
+                        <div id="topFilesLastMod" class="inner">
+                            <span class="label label-title">Last modified</span>
+                            <ul>
+                                <li><span id="tflm-date-1" class="label label-date"></span><span id="tflm-time-1" class="label label-time"></span><span id="tflm-owner-1" class="label label-owner"></span> <span id="tflm-ident-1"></span></li>
+                                <li><span id="tflm-date-2" class="label label-date"></span><span id="tflm-time-2" class="label label-time"></span><span id="tflm-owner-2" class="label label-owner"></span> <span id="tflm-ident-2"></span></li>
+                                <li><span id="tflm-date-3" class="label label-date"></span><span id="tflm-time-3" class="label label-time"></span><span id="tflm-owner-3" class="label label-owner"></span> <span id="tflm-ident-3"></span></li>
+                                <li><span id="tflm-date-4" class="label label-date"></span><span id="tflm-time-4" class="label label-time"></span><span id="tflm-owner-4" class="label label-owner"></span> <span id="tflm-ident-4"></span></li>
+                                <li><span id="tflm-date-5" class="label label-date"></span><span id="tflm-time-5" class="label label-time"></span><span id="tflm-owner-5" class="label label-owner"></span> <span id="tflm-ident-5"></span></li>
+                            </ul>
+                        </div>
+                    </div>
                     
                 </div>
                 
