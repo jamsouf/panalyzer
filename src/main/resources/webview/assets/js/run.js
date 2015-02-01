@@ -133,7 +133,7 @@ function initFiles() {
     write('tflm-owner-3', Data.topFilesLastMod[2].owner);
     write('tflm-owner-4', Data.topFilesLastMod[3].owner);
     write('tflm-owner-5', Data.topFilesLastMod[4].owner);
-    var max = 68;
+    var max = 70;
     write('tflm-ident-1', file(cut(Data.topFilesLastMod[0].ident, max)));
     write('tflm-ident-2', file(cut(Data.topFilesLastMod[1].ident, max)));
     write('tflm-ident-3', file(cut(Data.topFilesLastMod[2].ident, max)));
@@ -255,6 +255,7 @@ function generateTopFilesExtChart() {
  * most line of code in folders
  */
 function generateTopFoldersLocChart() {
+    var max = 25;
     $('#topFoldersLoc').highcharts({
         chart: {
             type: 'bar'
@@ -264,11 +265,11 @@ function generateTopFoldersLocChart() {
         },
         xAxis: {
             categories: [
-                Data.topFoldersLoc[0].ident,
-                Data.topFoldersLoc[1].ident,
-                Data.topFoldersLoc[2].ident,
-                Data.topFoldersLoc[3].ident,
-                Data.topFoldersLoc[4].ident
+                cut(Data.topFoldersLoc[0].ident, max),
+                cut(Data.topFoldersLoc[1].ident, max),
+                cut(Data.topFoldersLoc[2].ident, max),
+                cut(Data.topFoldersLoc[3].ident, max),
+                cut(Data.topFoldersLoc[4].ident, max)
             ],
             title: {
                 text: null
@@ -281,7 +282,7 @@ function generateTopFoldersLocChart() {
             }
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.y}</b></b>'
+            pointFormat: '{series.name}: <b>{point.y}</b>'
         },
         plotOptions: {
             bar: {
@@ -338,7 +339,7 @@ function generateTopFilesSizeChart () {
         tooltip: {
             formatter: function() {
                 return '<span style="font-size:10px">' + this.x + '</span><br>' + 
-                        this.series.name + ': <b>' + size(this.point.y) + '</b></b>';
+                        this.series.name + ': <b>' + size(this.point.y) + '</b>';
             }
         },
         plotOptions: {
@@ -396,7 +397,7 @@ function generateTopFilesLocChart () {
             }
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.y}</b></b>'
+            pointFormat: '{series.name}: <b>{point.y}</b>'
         },
         plotOptions: {
             column: {

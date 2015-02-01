@@ -1,0 +1,8 @@
+{
+  "ignores": [
+    ".git",
+    ".idea",
+    "target",
+    "*.iml"
+  ]
+}
