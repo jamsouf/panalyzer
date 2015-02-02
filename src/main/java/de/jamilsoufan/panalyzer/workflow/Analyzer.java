@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -17,7 +18,8 @@ public class Analyzer {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Analyzer.class);
 
-    public static final String WORKING_DIR = System.getProperty("user.dir") + "/";
+    public static final String FILE_SEPARATOR = System.getProperty("file.separator");
+    public static final String WORKING_DIR = System.getProperty("user.dir") + FILE_SEPARATOR;
     public static final String START_DIR = WORKING_DIR;
     public static final String REPORT_DIR = "panalyzer-report";
     public static final String JAR_PREFIX = "jar:";
@@ -134,7 +136,7 @@ public class Analyzer {
         
         for (String regex : ignore) {
             regex = regex.replace("*", "(.*)");
-            Pattern pattern = Pattern.compile(regex);
+            Pattern pattern = Pattern.compile(Matcher.quoteReplacement(regex));
             if (pattern.matcher(name).matches()) {
                 return true;
             }

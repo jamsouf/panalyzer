@@ -1,5 +1,6 @@
 package de.jamilsoufan.panalyzer.workflow;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
 import de.jamilsoufan.panalyzer.entities.File;
 import de.jamilsoufan.panalyzer.entities.Folder;
@@ -50,7 +51,7 @@ public class Logger {
     public void fillLog(List<FsObject> result) {
         Map<String, BigInteger> totalValues = getTotalValues(result);
 
-        log.put("project", Analyzer.START_DIR);
+        log.put("project", FsObject.escapeWindowsName(Analyzer.START_DIR));
         log.put("analyzed", new SimpleDateFormat("EEE, dd MMM yyyy HH:mm").format(new Date()));
         log.put("totalSize", totalValues.get(PROP_SIZE));
         log.put("totalFolders", totalValues.get(PROP_FOLDERS));
@@ -108,7 +109,9 @@ public class Logger {
         for (FsObject fsObject : result) {
             if (FsType.FILE.equals(fsObject.getType())) {
                 extension = ((File) fsObject).getExtension();
-                map.put(extension, 1 + (map.get(extension) == null ? Integer.valueOf(0) : map.get(extension)));
+                if (!Strings.isNullOrEmpty(extension)) {
+                    map.put(extension, 1 + (map.get(extension) == null ? Integer.valueOf(0) : map.get(extension)));
+                }
             }
         }
 
@@ -258,7 +261,9 @@ public class Logger {
             if (FsType.FILE.equals(fsObject.getType())) {
                 File file = (File) fsObject;
                 extension = file.getExtension();
-                map.put(extension, file.getLinesOfCode().add(map.get(extension) == null ? BigInteger.ZERO : map.get(extension)));
+                if (!Strings.isNullOrEmpty(extension)) {
+                    map.put(extension, file.getLinesOfCode().add(map.get(extension) == null ? BigInteger.ZERO : map.get(extension)));
+                }
             }
         }
 

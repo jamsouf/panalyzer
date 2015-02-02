@@ -106,7 +106,7 @@ public class FsObject {
      * @param fullPath The full path to set
      */
     public void setFullPath(String fullPath) {
-        this.fullPath = fullPath;
+        this.fullPath = escapeWindowsName(fullPath);
     }
 
     /**
@@ -129,7 +129,7 @@ public class FsObject {
      * @param relativePath The relative path to set
      */
     public void setRelativePath(String relativePath) {
-        this.relativePath = relativePath;
+        this.relativePath = escapeWindowsName(relativePath);
     }
 
     /**
@@ -152,7 +152,7 @@ public class FsObject {
      * @param owner The owner to set
      */
     public void setOwner(String owner) {
-        this.owner = owner;
+        this.owner = escapeWindowsName(owner);
     }
 
     /**
@@ -208,5 +208,15 @@ public class FsObject {
      */
     public void setLinesOfCode(BigInteger linesOfCode) {
         this.linesOfCode = linesOfCode;
+    }
+
+    /**
+     * Escape windows characters like the backslash
+     *
+     * @param name The name to scape
+     * @return Escaped name
+     */
+    public static String escapeWindowsName(String name) {
+        return name.replace("\\", "\\\\");
     }
 }

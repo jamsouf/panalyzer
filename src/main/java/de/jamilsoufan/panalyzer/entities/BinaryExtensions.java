@@ -12,7 +12,10 @@ public final class BinaryExtensions {
     
     static {
         LIST.add("png");
+        LIST.add("jpg");
         LIST.add("svg");
+        LIST.add("ai");
+        LIST.add("pdf");
         LIST.add("ttf");
         LIST.add("otf");
         LIST.add("eot");
