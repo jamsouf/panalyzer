@@ -62,6 +62,7 @@ function init () {
 function initOverview() {
     var max = 85;
     write('d.project', cut(Data.project, max));
+	writeTitle('d.project', Data.project);
     write('d.analyzed', Data.analyzed);
     write('d.totalSize', size(Data.totalSize));
     /*************************************************************/
@@ -85,22 +86,30 @@ function initFolders() {
     write('tff-value-3', Data.topFoldersFiles[2].value+files);
     write('tff-value-4', Data.topFoldersFiles[3].value+files);
     write('tff-value-5', Data.topFoldersFiles[4].value+files);
-    var max = 50;
+    var max = 60;
     write('tff-ident-1', cut(Data.topFoldersFiles[0].ident, max));
+	writeTitle('tff-ident-1', Data.topFoldersFiles[0].ident);
     write('tff-ident-2', cut(Data.topFoldersFiles[1].ident, max));
+	writeTitle('tff-ident-2', Data.topFoldersFiles[1].ident);
     write('tff-ident-3', cut(Data.topFoldersFiles[2].ident, max));
+	writeTitle('tff-ident-3', Data.topFoldersFiles[2].ident);
     write('tff-ident-4', cut(Data.topFoldersFiles[3].ident, max));
+	writeTitle('tff-ident-4', Data.topFoldersFiles[3].ident);
     write('tff-ident-5', cut(Data.topFoldersFiles[4].ident, max));
+	writeTitle('tff-ident-5', Data.topFoldersFiles[4].ident);
     /*************************************************************/
     write('d.totalFolders-2', nbr(Data.totalFolders));
     /*************************************************************/
     write('tfs-value-1', size(Data.topFoldersSize[0].value));
     write('tfs-value-2', size(Data.topFoldersSize[1].value));
     write('tfs-value-3', size(Data.topFoldersSize[2].value));
-    max = 18;
+    max = 25;
     write('tfs-ident-1', cut(Data.topFoldersSize[0].ident, max));
+	writeTitle('tfs-ident-1', Data.topFoldersSize[0].ident);
     write('tfs-ident-2', cut(Data.topFoldersSize[1].ident, max));
+	writeTitle('tfs-ident-2', Data.topFoldersSize[1].ident);
     write('tfs-ident-3', cut(Data.topFoldersSize[2].ident, max));
+	writeTitle('tfs-ident-3', Data.topFoldersSize[2].ident);
     /*************************************************************/
     generateTopFoldersLocChart();
 }
@@ -128,17 +137,28 @@ function initFiles() {
     write('tflm-time-3', Data.topFilesLastMod[2].time);
     write('tflm-time-4', Data.topFilesLastMod[3].time);
     write('tflm-time-5', Data.topFilesLastMod[4].time);
-    write('tflm-owner-1', Data.topFilesLastMod[0].owner);
-    write('tflm-owner-2', Data.topFilesLastMod[1].owner);
-    write('tflm-owner-3', Data.topFilesLastMod[2].owner);
-    write('tflm-owner-4', Data.topFilesLastMod[3].owner);
-    write('tflm-owner-5', Data.topFilesLastMod[4].owner);
-    var max = 70;
+	var max = 25;
+    write('tflm-owner-1', cut(Data.topFilesLastMod[0].owner, max));
+	writeTitle('tflm-owner-1', Data.topFilesLastMod[0].owner);
+    write('tflm-owner-2', cut(Data.topFilesLastMod[1].owner, max));
+	writeTitle('tflm-owner-2', Data.topFilesLastMod[1].owner);
+    write('tflm-owner-3', cut(Data.topFilesLastMod[2].owner, max));
+	writeTitle('tflm-owner-3', Data.topFilesLastMod[2].owner);
+    write('tflm-owner-4', cut(Data.topFilesLastMod[3].owner, max));
+	writeTitle('tflm-owner-4', Data.topFilesLastMod[3].owner);
+    write('tflm-owner-5', cut(Data.topFilesLastMod[4].owner, max));
+	writeTitle('tflm-owner-5', Data.topFilesLastMod[4].owner);
+    max = 62;
     write('tflm-ident-1', file(cut(Data.topFilesLastMod[0].ident, max)));
+	writeTitle('tflm-ident-1', Data.topFilesLastMod[0].ident);
     write('tflm-ident-2', file(cut(Data.topFilesLastMod[1].ident, max)));
+	writeTitle('tflm-ident-2', Data.topFilesLastMod[1].ident);
     write('tflm-ident-3', file(cut(Data.topFilesLastMod[2].ident, max)));
+	writeTitle('tflm-ident-3', Data.topFilesLastMod[2].ident);
     write('tflm-ident-4', file(cut(Data.topFilesLastMod[3].ident, max)));
+	writeTitle('tflm-ident-4', Data.topFilesLastMod[3].ident);
     write('tflm-ident-5', file(cut(Data.topFilesLastMod[4].ident, max)));
+	writeTitle('tflm-ident-5', Data.topFilesLastMod[4].ident);
 }
 
 /**
@@ -147,6 +167,14 @@ function initFiles() {
  */
 function write(id, content) {
     document.getElementById(id).innerHTML = content;
+}
+
+/**
+ * Write a value title
+ * into the document
+ */
+function writeTitle(id, content) {
+    document.getElementById(id).title = content;
 }
 
 /**
@@ -186,6 +214,7 @@ function cut(v, max) {
  */
 function file(str) {
     var n = str.lastIndexOf('/');
+	if (n == -1) n = str.lastIndexOf('\\');
     var path = str.substring(0, n + 1);
     var file = str.substring(n + 1);
     return '<span class="path-start">'+path+'</span><span class="path-end">'+file+'</span>';
@@ -311,6 +340,7 @@ function generateTopFoldersLocChart() {
  * biggest files by size
  */
 function generateTopFilesSizeChart () {
+	var max = 85;
     $('#topFilesSize').highcharts({
         chart: {
             type: 'column'
@@ -320,11 +350,11 @@ function generateTopFilesSizeChart () {
         },
         xAxis: {
             categories: [
-                Data.topFilesSize[0].ident,
-                Data.topFilesSize[1].ident,
-                Data.topFilesSize[2].ident,
-                Data.topFilesSize[3].ident,
-                Data.topFilesSize[4].ident
+                cut(Data.topFilesSize[0].ident, max),
+                cut(Data.topFilesSize[1].ident, max),
+                cut(Data.topFilesSize[2].ident, max),
+                cut(Data.topFilesSize[3].ident, max),
+                cut(Data.topFilesSize[4].ident, max)
             ],
             labels: {
                 enabled: false
@@ -371,6 +401,7 @@ function generateTopFilesSizeChart () {
  * biggest files by lines of code
  */
 function generateTopFilesLocChart () {
+	var max = 60;
     $('#topFilesLoc').highcharts({
         chart: {
             type: 'column'
@@ -380,11 +411,11 @@ function generateTopFilesLocChart () {
         },
         xAxis: {
             categories: [
-                Data.topFilesLoc[0].ident,
-                Data.topFilesLoc[1].ident,
-                Data.topFilesLoc[2].ident,
-                Data.topFilesLoc[3].ident,
-                Data.topFilesLoc[4].ident
+                cut(Data.topFilesLoc[0].ident, max),
+                cut(Data.topFilesLoc[1].ident, max),
+                cut(Data.topFilesLoc[2].ident, max),
+                cut(Data.topFilesLoc[3].ident, max),
+                cut(Data.topFilesLoc[4].ident, max)
             ],
             labels: {
                 enabled: false
