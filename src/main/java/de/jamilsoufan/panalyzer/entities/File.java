@@ -92,7 +92,7 @@ public class File extends FsObject {
      * @return True, if mime type is text
      */
     private Boolean isMimeTypeText(File file) {
-        if (BinaryExtensions.inList(file.getExtension().toLowerCase())) {
+        if (BinaryExtensions.inList(file.getExtension())) {
             return false;
         }
         
