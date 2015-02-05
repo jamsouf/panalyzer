@@ -3,10 +3,9 @@ panalyzer
 
 panalyzer is a small command line JAR program to analyze a project or in general a directory and its content. It gives a short summary of the file types, lines of code, directory size, latest modified files and a couple of other values.
 
-<img src="http://i.imgur.com/MzXnvwk.jpg" width="50">
-![overview](http://i.imgur.com/MzXnvwk.jpg)
-![folders](http://i.imgur.com/ksoChhS.jpg)
-![files](http://i.imgur.com/QeLvVZb.jpg)
+<img src="http://i.imgur.com/MzXnvwk.jpg" alt="overview" width="240">
+<img src="http://i.imgur.com/ksoChhS.jpg" alt="folders" width="240">
+<img src="http://i.imgur.com/QeLvVZb.jpg" alt="files" width="240">
 
 Usage
 -----
