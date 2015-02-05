@@ -25,14 +25,14 @@ Crate the file `panalyzer.json` and put it into the same directory where the JAR
 ##### example content
 ``` json
 {
-    "ignores": [
-        "*.iml",
-        ".git",
-        "*target",
-        "src/main/resources/tmp",
-        "tmp/data/*.log",
-        "config/db/*/*password*.conf"
-    ]
+  "ignores": [
+    "*.iml",
+    ".git",
+    "*target",
+    "src/main/resources/tmp",
+    "tmp/data/*.log",
+    "config/db/*/*password*.conf"
+  ]
 }
 ```
 
