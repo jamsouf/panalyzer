@@ -38,5 +38,5 @@ Crate the file `panalyzer.json` and put it into the same directory where the JAR
 
 Build
 -----
-To build the JAR package from the sources execute the following command in a command line:  
+To build the JAR package from the sources execute the following command in a terminal:  
 `mvn clean compile assembly:single`
